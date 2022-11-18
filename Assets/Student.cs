@@ -14,17 +14,25 @@ public struct Box
     //     x = 10;
     // }
 }
+// enum : 열거형
+// 열거된 순서대로 0, 1, 2,... 의 int 값을 가진다.
+public enum DepartmentName
+{
+    Drawing, OpenMajor, CoumputerEngineering, 경제학과
+}
 
 // 나만의 클래스를 만들고 싶으면, 
 // 상속받은 MonoBehaviour과 class 안의 내용을 모두 지워준다.
 
 // C#에는 포인터가 없다! 참조형 변수는 있다.
 
+[System.Serializable]   // Student Class를 inspector에서 수정이 가능하게 한다.
 public class Student
 {
     // 각 객체에 따로 생성되지 않고,
     // 독립적인 공간에 존재하는 static variable.
     public static string university = "인천대학교";
+    public DepartmentName department;
 
     public Box myBox;
 
@@ -33,6 +41,11 @@ public class Student
     public int classNumber;
     public int level;
     public int age;
+
+    public void SetDepartment(DepartmentName name)
+    {
+        department = name;
+    }
 
     public static void ChangUniversityName(string univName)
     {
