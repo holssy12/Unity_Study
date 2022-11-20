@@ -21,7 +21,7 @@ public class TestCollections : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Student 객체 공간을 가리킬 수 있는 변수를 담는 Array를 만들어 공간 4개 할당. 
+        // Student 객체 공간을 가리킬 수 있는 변수를 담는 Array를 만들어 공간 4개 할당.
         arr = new Student[4];
 
         for (int i = 0; i < 4; i++)
@@ -47,7 +47,7 @@ public class TestCollections : MonoBehaviour
         // add를 통해, 가리키는 공간을 채운다.
         myList.Add(10); // 0번
         myList.Add(40); // 1번
-        myList.Add(60); // 1번
+        myList.Add(60); // 2번
         myList[1] = 20;
 
         // Debug.Log(myList[0]);
